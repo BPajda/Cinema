@@ -2,7 +2,7 @@
 session_start();
 $zmienna = "";
 $conn = mysqli_connect("localhost", "root", "", 'kino');
-if ($conn->connect_errno) die("zesrales sie");
+if ($conn->connect_errno) die("unlucky");
 if (isset($_POST['sit'])) {
 
     for ($i = 0; $i < count($_POST['sit']); $i++) {
@@ -98,14 +98,6 @@ if (isset($_POST['sit'])) {
         .sub {
             font-size: 30px;
         }
-
-        /* .dis {
-            background-color: darkmagenta
-        } */
-
-        /* input[type="checkbox"]:disabled+label::before {
-            background-color: darkmagenta;
-        } */
     </style>
 </head>
 

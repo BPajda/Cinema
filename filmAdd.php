@@ -2,9 +2,9 @@
 session_start();
 $zmienna = "";
 if (isset($_POST["film"])) {
-    $zmienna = "ez szmato ";
+    $zmienna = "it is what it is";
     $conn = mysqli_connect("localhost", "root", "", 'kino');
-    if ($conn->connect_errno) die("zesrales sie");
+    if ($conn->connect_errno) die("unlucky");
     $film = $_POST["film"];
 
     if (mb_strlen($film, "UTF-8") > 0) {

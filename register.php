@@ -7,7 +7,7 @@ if (isset($_SESSION["logged"]) && $_SESSION["logged"] == true) {
     if (isset($_POST["log"], $_POST["pas"], $_POST["tel"])) {
 
         $conn = mysqli_connect("localhost", "root", "", 'kino');
-        if ($conn->connect_errno) die("zesrales sie");
+        if ($conn->connect_errno) die("unlucky");
         $log = $_POST["log"];
         $pas = $_POST["pas"];
         $tel = intval($_POST["tel"]);
@@ -21,7 +21,7 @@ if (isset($_SESSION["logged"]) && $_SESSION["logged"] == true) {
                 $zmienna = "dodano";
                 header("Location: ./login.php");
             } else {
-                $zmienna = "taki użyszkodnik już istnieje";
+                $zmienna = "taki user już istnieje";
             }
         }
     }
@@ -35,7 +35,7 @@ if (isset($_SESSION["logged"]) && $_SESSION["logged"] == true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Register</title>
     <style>
         body {
             background-color: darkslategrey;

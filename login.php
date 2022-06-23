@@ -9,7 +9,7 @@ if (isset($_SESSION["logged"]) && $_SESSION["logged"] == true) {
     if (isset($_POST["log"], $_POST["pas"])) {
 
         $conn = mysqli_connect("localhost", "root", "", 'kino');
-        if ($conn->connect_errno) die("zesrales sie");
+        if ($conn->connect_errno) die("unlucky");
         $log = $_POST["log"];
         $pas = $_POST["pas"];
 
@@ -18,7 +18,7 @@ if (isset($_SESSION["logged"]) && $_SESSION["logged"] == true) {
             $odp = mysqli_fetch_all($check, MYSQLI_ASSOC);
             if (count($odp) == 0) {
 
-                $zmienna = "taki użyszkodnik nie istnieje";
+                $zmienna = "taki user nie istnieje";
             } else {
                 $logged = false;
                 foreach ($odp as $e) {

@@ -2,7 +2,7 @@
 session_start();
 
 $conn = mysqli_connect("localhost", "root", "", 'kino');
-if ($conn->connect_errno) die("zesrales sie");
+if ($conn->connect_errno) die("unlucky");
 if (isset($_POST["film"], $_POST["day"], $_POST["time"])) {
 
     $filmID = intval($_POST["film"]);
